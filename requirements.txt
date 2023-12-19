@@ -1,4 +1,4 @@
-c2v
+opencv-python
 easyocr
 fastapi
 uvicorn
