@@ -2,8 +2,16 @@ import cv2
 import easyocr
 import re
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins="*",  # Allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # You can specify the HTTP methods you want to allow
+    allow_headers=["*"],  # You can specify the HTTP headers you want to allow
+)
 
 # Function to extract text from an image using EasyOCR
 def extract_text_from_image(contents):
