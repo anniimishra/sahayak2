@@ -1,0 +1,4 @@
+c2v
+easyocr
+fastapi
+uvicorn
